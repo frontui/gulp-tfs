@@ -1,0 +1,26 @@
+{
+  "name": "gulp-tfs",
+  "version": "0.0.1",
+  "description": "gulp plugin for team foundation server",
+  "main": "gulp-tfs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Junyiz/gulp-tfs.git"
+  },
+  "dependencies": {
+    "through2": "^0.4.2"
+  },
+  "keywords": [
+    "gulp",
+    "tfs"
+  ],
+  "author": "Junyiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junyiz/gulp-tfs/issues"
+  },
+  "homepage": "https://github.com/Junyiz/gulp-tfs"
+}
