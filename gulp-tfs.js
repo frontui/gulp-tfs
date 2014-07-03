@@ -80,3 +80,10 @@ exports.undo = function() {
         shell('tf undo /recursive /noprompt ' + filepath);
     });
 };
+
+exports.add = function() {
+    return through2.obj(function(file, enc, cb) {
+        var filepath = file.path;
+        shell('tf add ' + filepath + ' /recursive /noprompt);
+    });
+};
