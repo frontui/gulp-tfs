@@ -1,6 +1,6 @@
 {
   "name": "gulp-tfs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "gulp plugin for team foundation server",
   "main": "gulp-tfs.js",
   "scripts": {
