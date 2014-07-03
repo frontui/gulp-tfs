@@ -84,6 +84,6 @@ exports.undo = function() {
 exports.add = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf add ' + filepath + ' /recursive /noprompt);
+        shell('tf add ' + filepath + ' /recursive /noprompt');
     });
 };
