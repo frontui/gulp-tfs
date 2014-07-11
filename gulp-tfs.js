@@ -87,3 +87,10 @@ exports.add = function() {
         shell('tf add ' + filepath + ' /recursive /noprompt');
     });
 };
+
+exports.get = function() {
+    return through2.obj(function(file, enc, cb) {
+        var filepath = file.path;
+        shell('tf get ' + filepath + ' /recursive /noprompt');
+    });
+};
