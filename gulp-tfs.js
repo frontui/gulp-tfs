@@ -70,7 +70,7 @@ exports.checkout = function() {
 exports.checkin = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf checkin /recursive /noprompt /comment:"Compress Javascript ' + dateFormat(new Date, 'yyyy-MM-dd hh:mm:ss') + '" ' + filepath);
+        shell('tf checkin /recursive /noprompt /comment:"Compress Javascript ' + dateFormat(new Date, 'yyyy-MM-dd hh:mm:ss') + ' +review static-js" ' + filepath);
     });
 };
 
