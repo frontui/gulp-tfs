@@ -50,47 +50,48 @@ function dateFormat(date, format) {
     return format;
 }
 
-function shell(command) {
+function shell(command, callback) {
     exec(command, function(error, stdout, stderr) {
         stdout && console.log('stdout: ' + stdout);
         stderr && console.log('stderr: ' + stderr);
         if (error !== null) {
             console.log('exec error: ' + error);
         }
+        callback();
     });
 }
 
 exports.checkout = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf checkout /recursive ' + filepath);
+        shell('tf checkout /recursive ' + filepath, cb);
     });
 };
 
 exports.checkin = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf checkin /recursive /noprompt /comment:"Compress Javascript ' + dateFormat(new Date, 'yyyy-MM-dd hh:mm:ss') + ' +review static-js" ' + filepath);
+        shell('tf checkin /recursive /noprompt /comment:"Compress Javascript ' + dateFormat(new Date, 'yyyy-MM-dd hh:mm:ss') + ' +review static-js" ' + filepath, cb);
     });
 };
 
 exports.undo = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf undo /recursive /noprompt ' + filepath);
+        shell('tf undo /recursive /noprompt ' + filepath, cb);
     });
 };
 
 exports.add = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf add ' + filepath + ' /recursive /noprompt');
+        shell('tf add ' + filepath + ' /recursive /noprompt', cb);
     });
 };
 
 exports.get = function() {
     return through2.obj(function(file, enc, cb) {
         var filepath = file.path;
-        shell('tf get ' + filepath + ' /recursive /noprompt');
+        shell('tf get ' + filepath + ' /recursive /noprompt', cb);
     });
 };
