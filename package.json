@@ -1,6 +1,6 @@
 {
-  "name": "gulp-tfs",
-  "version": "0.0.8",
+  "name": "gulp-tfs-fp",
+  "version": "1.0.0",
   "description": "gulp plugin for team foundation server",
   "main": "gulp-tfs.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Junyiz/gulp-tfs.git"
+    "url": "git://github.com/frontui/gulp-tfs.git"
   },
   "dependencies": {
     "through2": "^0.4.2"
@@ -17,10 +17,10 @@
     "gulp",
     "tfs"
   ],
-  "author": "Junyiz",
-  "license": "ISC",
+  "author": "frontui",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Junyiz/gulp-tfs/issues"
+    "url": "https://github.com/frontui/gulp-tfs/issues"
   },
-  "homepage": "https://github.com/Junyiz/gulp-tfs"
+  "homepage": "https://github.com/frontui/gulp-tfs"
 }
